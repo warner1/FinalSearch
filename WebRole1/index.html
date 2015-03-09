@@ -88,8 +88,8 @@
             data: {},
             success: function (msg) {
                 console.log(msg.d);
-                $("lt").append(msg.d[0]);
-                $("tc").append(msg.d[1]);
+                $("#lt").html(msg.d[0]);
+                $("#tc").html(msg.d[1]);
 
             }
         })

@@ -20,17 +20,6 @@
     <Endpoints>
       <InputEndpoint name="Endpoint1" protocol="http" port="80" />
     </Endpoints>
-    <Contents>
-      <Content destination=".\">
-        <SourceDirectory path="C:\Users\iguest\Downloads\info344hw4-master\WebCrawl\rcf\Debug\WebRole1Content\" />
-      </Content>
-    </Contents>
   </WebRole>
-  <WorkerRole name="WorkerRole1" vmsize="Small">
-    <Contents>
-      <Content destination=".\">
-        <SourceDirectory path="C:\Users\iguest\Downloads\info344hw4-master\WebCrawl\rcf\Debug\WorkerRole1Content\" />
-      </Content>
-    </Contents>
-  </WorkerRole>
+  <WorkerRole name="WorkerRole1" vmsize="Small" />
 </ServiceDefinition>

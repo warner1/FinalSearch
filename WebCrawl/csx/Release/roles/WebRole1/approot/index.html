@@ -45,6 +45,8 @@
 
     <div class="container" align="center" >
         <table id="count" class="table table-striped">
+            <tr> <td>Last Title Processed</td> <td>Total Titles Processed</td></tr>
+            <tr> <td id="lt"> </td> <td id="tc"></td></tr>
         </table>
     </div>
 
@@ -76,7 +78,8 @@
 
 <script>
 
-    $(document).ready(function(e) { 
+    $(document).ready(function () {
+        console.log("Document Ready");
         $.ajax({
             type: 'POST',
             url: "WebService1.asmx/getStats",
@@ -84,11 +87,9 @@
             contentType: "application/json; charset=utf-8",
             data: {},
             success: function (msg) {
-                console.log(msg);
                 console.log(msg.d);
-                $("count").append("<tr><td>Last Title Processed</td><td>Total Titles Processed</td></tr><tr><td>" +
-                    msg.d[0] + "</td><td>" +
-                    msg.d[1] + "</td></tr>")
+                $("#lt").html(msg.d[0]);
+                $("#tc").html(msg.d[1]);
 
             }
         })
