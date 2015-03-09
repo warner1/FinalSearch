@@ -156,6 +156,7 @@ C:\Users\iguest\Downloads\info344hw4-master\WebCrawl\obj\Release\WebRole1\bin\zh
 C:\Users\iguest\Downloads\info344hw4-master\WebCrawl\obj\Release\WebRole1\bin\zh-Hant\System.Spatial.resources.dll
 C:\Users\iguest\Downloads\info344hw4-master\WebCrawl\obj\Release\WebRole1\index.html
 C:\Users\iguest\Downloads\info344hw4-master\WebCrawl\obj\Release\WebRole1\packages.config
+C:\Users\iguest\Downloads\info344hw4-master\WebCrawl\obj\Release\WebRole1\style.css
 C:\Users\iguest\Downloads\info344hw4-master\WebCrawl\obj\Release\WebRole1\Web.config
 C:\Users\iguest\Downloads\info344hw4-master\WebCrawl\obj\Release\WebRole1\WebService1.asmx
 C:\Users\iguest\Downloads\info344hw4-master\WebCrawl\obj\Release\WorkerRole1\de\Microsoft.Data.Edm.resources.dll

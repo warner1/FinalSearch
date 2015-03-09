@@ -1,25 +1,29 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Dashboard</title>
+    <title>Bolt Search</title>
+    
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
     <!-- Latest compiled JavaScript -->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <style>
-        div {
-            padding: 5px 5px 5px 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" href="http://sstatic.net/stackoverflow/img/favicon.ico">
 </head>
 <body>
-    <h1 align="center">Info 344 Programming Assignment 3 Dashboard</h1>
+    <div class="container-fluid" align="center">
+        
+        <h1 align="center"><i id="bolt" class="fa fa-bolt fa-6"></i></h1>
+        <h3 align="center">Search As Fast As Lightning</h3>
+    </div>
+    
 
-    <div class="container-fluid" align="center" style="width:80%">
+    <div class="container-fluid" align="center" >
         <div class="row">
-            <div class="input-group">
+            <div class="input-group" style="width:50%">
                 <input type="text" id="input" class="form-control" placeholder="Type in Query">
                 <span class="input-group-btn">
                     <button id="query" class="btn btn-default" type="button">
@@ -32,30 +36,30 @@
         <table id="suggestions" class="table" style="width:80%"></table>
     </div>
 
-    <div class="container" align="center" style="width:80%">
+    <div class="container" align="center" >
         <table id="count" class="table table-striped">
         </table>
     </div>
 
     <div class="container" align="center">
-        <table id="player" class="table table-striped" style="width:80%">
+        <table id="player" class="table table-striped">
 
         </table>
     </div>
 
     <div class="container" align="center">
-        <table id="titles" class="table table-striped" style="width:80%"></table>
+        <table id="titles" class="table table-striped" ></table>
     </div>
 
     <div class="container" align="center" >
-        <button id="start" class="btn btn-success">Start</button>
-        <button id="refresh" class="btn btn-info">Refresh</button>
-        <button id="stop" class="btn btn-danger">Stop</button>
-        <button id="clear" class="btn btn-danger">Clear All</button>
+        <button id="start" class="btn btn-primary">Start</button>
+        <button id="refresh" class="btn btn-primary">Refresh</button>
+        <button id="stop" class="btn btn-primary">Stop</button>
+        <button id="clear" class="btn btn-primary">Clear All</button>
     </div>
 
     <div class="container" align="center">
-        <table class="table table-striped" style="width:80%">
+        <table class="table table-striped">
             <tr>
                 <td><h3>State</h3></td>
                 <td><h3>Title</h3></td>
@@ -78,7 +82,7 @@
     </div>
 
     <div class="container" align="center">
-        <table class=" table table-striped" style="width:80%">
+        <table class=" table table-striped" >
             <tr>
                 <td><h3 align="center">Last Ten Urls</h3></td>
                 <td><h3 align="center">Last Ten Errors</h3></td>
@@ -104,7 +108,9 @@
             success: function (msg) {
                 console.log(msg);
                 console.log(msg.d);
-                var result = $.parseJSON(msg.d);
+                $("count").append("<tr><td>Last Title Processed</td><td>Total Titles Processed</td></tr><tr><td>" +
+                    msg.d[0] + "</td><td>" +
+                    msg.d[1] + "</td></tr>")
 
             }
         })

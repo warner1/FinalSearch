@@ -1,0 +1,12 @@
+﻿body {
+    background-color: #d3d3d3;
+}
+
+div {
+    padding: 5px 5px 5px 5px;
+    width: auto;
+}
+
+#bolt {
+    font-size: 5em;
+}
