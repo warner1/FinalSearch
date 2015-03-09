@@ -1,0 +1,122 @@
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\WorkerRole1.dll.config
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\WorkerRole1.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\WorkerRole1.pdb
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\Microsoft.Data.Edm.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\Microsoft.Data.OData.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\Microsoft.Data.Services.Client.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\Microsoft.WindowsAzure.Configuration.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\Microsoft.WindowsAzure.Diagnostics.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\Microsoft.WindowsAzure.Storage.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\Newtonsoft.Json.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\System.Spatial.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\MonAgentListener.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\Microsoft.Data.Edm.xml
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\Microsoft.Data.OData.xml
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\Microsoft.Data.Services.Client.xml
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\Microsoft.WindowsAzure.Configuration.xml
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\Microsoft.WindowsAzure.Storage.xml
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\Newtonsoft.Json.xml
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\System.Spatial.xml
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\de\Microsoft.Data.Edm.resources.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\es\Microsoft.Data.Edm.resources.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\fr\Microsoft.Data.Edm.resources.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\it\Microsoft.Data.Edm.resources.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\ja\Microsoft.Data.Edm.resources.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\ko\Microsoft.Data.Edm.resources.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\ru\Microsoft.Data.Edm.resources.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\zh-Hans\Microsoft.Data.Edm.resources.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\zh-Hant\Microsoft.Data.Edm.resources.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\de\Microsoft.Data.OData.resources.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\es\Microsoft.Data.OData.resources.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\fr\Microsoft.Data.OData.resources.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\it\Microsoft.Data.OData.resources.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\ja\Microsoft.Data.OData.resources.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\ko\Microsoft.Data.OData.resources.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\ru\Microsoft.Data.OData.resources.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\zh-Hans\Microsoft.Data.OData.resources.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\zh-Hant\Microsoft.Data.OData.resources.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\de\Microsoft.Data.Services.Client.resources.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\es\Microsoft.Data.Services.Client.resources.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\fr\Microsoft.Data.Services.Client.resources.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\it\Microsoft.Data.Services.Client.resources.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\ja\Microsoft.Data.Services.Client.resources.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\ko\Microsoft.Data.Services.Client.resources.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\ru\Microsoft.Data.Services.Client.resources.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\de\System.Spatial.resources.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\es\System.Spatial.resources.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\fr\System.Spatial.resources.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\it\System.Spatial.resources.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\ja\System.Spatial.resources.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\ko\System.Spatial.resources.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\ru\System.Spatial.resources.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\zh-Hans\System.Spatial.resources.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\zh-Hant\System.Spatial.resources.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\obj\Debug\WorkerRole1.dll
+\\psf\home\documents\visual studio 2013\Projects\WebCrawl\WorkerRole1\obj\Debug\WorkerRole1.pdb
+\\psf\Home\Documents\Visual Studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\HtmlAgilityPack.dll
+\\psf\Home\Documents\Visual Studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\HtmlAgilityPack.pdb
+\\psf\Home\Documents\Visual Studio 2013\Projects\WebCrawl\WorkerRole1\bin\Debug\HtmlAgilityPack.xml
+\\psf\Home\Documents\Visual Studio 2013\Projects\WebCrawl\WorkerRole1\obj\Debug\WorkerRole1.csprojResolveAssemblyReference.cache
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\WorkerRole1.dll.config
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\WorkerRole1.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\WorkerRole1.pdb
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\HtmlAgilityPack.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\Microsoft.Data.Edm.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\Microsoft.Data.OData.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\Microsoft.Data.Services.Client.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\Microsoft.WindowsAzure.Configuration.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\Microsoft.WindowsAzure.Diagnostics.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\Microsoft.WindowsAzure.Storage.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\Newtonsoft.Json.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\System.Spatial.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\MonAgentListener.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\HtmlAgilityPack.xml
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\Microsoft.Data.Edm.xml
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\Microsoft.Data.OData.xml
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\Microsoft.Data.Services.Client.xml
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\Microsoft.WindowsAzure.Configuration.xml
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\Microsoft.WindowsAzure.Storage.xml
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\Newtonsoft.Json.xml
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\System.Spatial.xml
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\de\Microsoft.Data.Edm.resources.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\es\Microsoft.Data.Edm.resources.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\it\Microsoft.Data.Edm.resources.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\de\Microsoft.Data.OData.resources.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\es\Microsoft.Data.OData.resources.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\fr\Microsoft.Data.OData.resources.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\it\Microsoft.Data.OData.resources.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\ja\Microsoft.Data.OData.resources.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\ko\Microsoft.Data.OData.resources.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\ru\Microsoft.Data.OData.resources.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\de\Microsoft.Data.Services.Client.resources.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\es\Microsoft.Data.Services.Client.resources.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\fr\Microsoft.Data.Services.Client.resources.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\it\Microsoft.Data.Services.Client.resources.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\ja\Microsoft.Data.Services.Client.resources.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\ko\Microsoft.Data.Services.Client.resources.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\ru\Microsoft.Data.Services.Client.resources.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\de\System.Spatial.resources.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\es\System.Spatial.resources.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\fr\System.Spatial.resources.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\it\System.Spatial.resources.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\ja\System.Spatial.resources.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\ko\System.Spatial.resources.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\ru\System.Spatial.resources.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\zh-Hans\System.Spatial.resources.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\bin\Debug\zh-Hant\System.Spatial.resources.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\obj\Debug\WorkerRole1.csprojResolveAssemblyReference.cache
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\obj\Debug\WorkerRole1.dll
+C:\Users\iguest\Downloads\info344hw4-master\WorkerRole1\obj\Debug\WorkerRole1.pdb
