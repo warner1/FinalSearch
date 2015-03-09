@@ -33,3 +33,7 @@ a:hover {
     bottom: 0;
     width: 100%;
 }
+
+#count {
+    width:400px;
+}

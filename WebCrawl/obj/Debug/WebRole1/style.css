@@ -27,3 +27,13 @@ a:hover {
     color:#FFFFFF;
     text-decoration:none;
 }
+
+#ad {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#count {
+    width:400px;
+}

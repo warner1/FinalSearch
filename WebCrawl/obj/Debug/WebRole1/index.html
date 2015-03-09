@@ -45,6 +45,8 @@
 
     <div class="container" align="center" >
         <table id="count" class="table table-striped">
+            <tr> <td>Last Title Processed</td> <td>Total Titles Processed</td></tr>
+            <tr> <td id="lt"> </td> <td id="tc"></td></tr>
         </table>
     </div>
 
@@ -58,12 +60,26 @@
         <table id="titles" class="table table-striped" ></table>
     </div>
 
+    <div id="ad"class="container" align="center" >
+        <script type="text/javascript">
+    (function () {
+        if (window.CHITIKA === undefined) { window.CHITIKA = { 'units': [] }; };
+        var unit = { "calltype": "async[2]", "publisher": "warner1", "width": 550, "height": 250, "sid": "Chitika Default" };
+        var placement_id = window.CHITIKA.units.length;
+        window.CHITIKA.units.push(unit);
+        document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
+    }());
+        </script>
+        <script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script>
+    </div>
+   
 </body>
 </html>
 
 <script>
 
-    $(document).ready(function(e) { 
+    $(document).ready(function () {
+        console.log("Document Ready");
         $.ajax({
             type: 'POST',
             url: "WebService1.asmx/getStats",
@@ -71,11 +87,9 @@
             contentType: "application/json; charset=utf-8",
             data: {},
             success: function (msg) {
-                console.log(msg);
                 console.log(msg.d);
-                $("count").append("<tr><td>Last Title Processed</td><td>Total Titles Processed</td></tr><tr><td>" +
-                    msg.d[0] + "</td><td>" +
-                    msg.d[1] + "</td></tr>")
+                $("lt").append(msg.d[0]);
+                $("tc").append(msg.d[1]);
 
             }
         })
@@ -160,113 +174,5 @@
                 }
             });
         }
-    })
-
-    $("#start").click(function start() {
-        $("#stat").empty();
-        $.ajax({
-            type: "POST",
-            url: "admin.asmx/StartCrawl",
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            success: function (msg) {
-                console.log(msg.d);
-            }
-        })
-    })
-
-    $("#stop").click(function stop() {
-        $("#status").empty();
-        $.ajax({
-            type: "POST",
-            url: "admin.asmx/StopCrawl",
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            success: function (msg) {
-                console.log(msg.d);
-            }
-        })
-    })
-
-    $("#clear").click(function clear() {
-        $.ajax({
-            type: "POST",
-            url: "admin.asmx/ClearAll",
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            success: function (msg) {
-                console.log(msg.d);
-            }
-        })
-    })
-
-    $("#refresh").click(function fresh() {
-        $("#stat").empty();
-        $("#cpu").empty();
-        $("#mem").empty();
-        $("#tsize").empty();
-        $("#qsize").empty();
-        $("#ten").empty();
-        $("#err").empty();
-        $("#crawl").empty();
-
-        $.ajax({
-            type: "POST",
-            url: "admin.asmx/Stats",
-            data: JSON.stringify(),
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            success: function (msg) {
-                console.log(msg.d);
-                var result = $.parseJSON(msg.d);
-                console.log(result);
-
-                $("#stat").text(result[0]);
-                $("#cpu").text(result[1] + "%");
-                $("#mem").text(result[2]);
-                $("#tsize").text(result[3]);
-                var ten = result[4].split(',');
-                var i = 0;
-                while (i != ten.length) {
-                    $("#ten").append("<li>" + ten[i] + "</li>");
-                    i++;
-                }
-                $("#crawl").text(result[5]);
-
-            }
-        })
-
-        $.ajax({
-            type: "POST",
-            url: "admin.asmx/Error",
-            data: JSON.stringify(),
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            success: function (msg) {
-                console.log(msg.d);
-                var result = $.parseJSON(msg.d);
-                var error = result[0].split(',');
-                console.log(result);
-                var i = 0;
-                while (i != error.length) {
-                    $("#err").append("<li>" + error[i] + "</li>");
-                    i++;
-                }
-            }
-        })
-
-        $.ajax({
-            type: "POST",
-            url: "admin.asmx/getQueueSize",
-            data: JSON.stringify(),
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            success: function (msg) {
-                console.log(msg.d);
-                $("#qsize").append("<p>" + msg.d + "</p>");
-            }
-        })
-    })
-
-    
+    })    
 </script>
