@@ -32,11 +32,15 @@
                 </span>
             </div>
         </div>
-        <table id="suggestions" class="table" style="width:80%"></table>
+        <table id="suggestions" class="table" style="width:45%"></table>
     </div>
 
     <div class="container-fluid" align="center">
-       <button id="dash" class="btn btn-info"><i class="fa fa-bug"></i>Travel to Dashboard</button>
+        <button id="dash" class="btn btn-info" href="dashboard.html">
+            <i class="fa fa-bug"></i>
+            
+            <a href="dashboard.html">Travel to Dashboard</a>
+        </button>
     </div>
 
     <div class="container" align="center" >
@@ -156,113 +160,5 @@
                 }
             });
         }
-    })
-
-    $("#start").click(function start() {
-        $("#stat").empty();
-        $.ajax({
-            type: "POST",
-            url: "admin.asmx/StartCrawl",
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            success: function (msg) {
-                console.log(msg.d);
-            }
-        })
-    })
-
-    $("#stop").click(function stop() {
-        $("#status").empty();
-        $.ajax({
-            type: "POST",
-            url: "admin.asmx/StopCrawl",
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            success: function (msg) {
-                console.log(msg.d);
-            }
-        })
-    })
-
-    $("#clear").click(function clear() {
-        $.ajax({
-            type: "POST",
-            url: "admin.asmx/ClearAll",
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            success: function (msg) {
-                console.log(msg.d);
-            }
-        })
-    })
-
-    $("#refresh").click(function fresh() {
-        $("#stat").empty();
-        $("#cpu").empty();
-        $("#mem").empty();
-        $("#tsize").empty();
-        $("#qsize").empty();
-        $("#ten").empty();
-        $("#err").empty();
-        $("#crawl").empty();
-
-        $.ajax({
-            type: "POST",
-            url: "admin.asmx/Stats",
-            data: JSON.stringify(),
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            success: function (msg) {
-                console.log(msg.d);
-                var result = $.parseJSON(msg.d);
-                console.log(result);
-
-                $("#stat").text(result[0]);
-                $("#cpu").text(result[1] + "%");
-                $("#mem").text(result[2]);
-                $("#tsize").text(result[3]);
-                var ten = result[4].split(',');
-                var i = 0;
-                while (i != ten.length) {
-                    $("#ten").append("<li>" + ten[i] + "</li>");
-                    i++;
-                }
-                $("#crawl").text(result[5]);
-
-            }
-        })
-
-        $.ajax({
-            type: "POST",
-            url: "admin.asmx/Error",
-            data: JSON.stringify(),
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            success: function (msg) {
-                console.log(msg.d);
-                var result = $.parseJSON(msg.d);
-                var error = result[0].split(',');
-                console.log(result);
-                var i = 0;
-                while (i != error.length) {
-                    $("#err").append("<li>" + error[i] + "</li>");
-                    i++;
-                }
-            }
-        })
-
-        $.ajax({
-            type: "POST",
-            url: "admin.asmx/getQueueSize",
-            data: JSON.stringify(),
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            success: function (msg) {
-                console.log(msg.d);
-                $("#qsize").append("<p>" + msg.d + "</p>");
-            }
-        })
-    })
-
-    
+    })    
 </script>

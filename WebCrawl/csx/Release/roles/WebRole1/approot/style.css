@@ -14,3 +14,16 @@ div {
 #bug {
     font-size: 5em;
 }
+
+table {
+    width:80%;
+}
+
+a {
+    color:#FFFFFF;
+}
+
+a:hover {
+    color:#FFFFFF;
+    text-decoration:none;
+}

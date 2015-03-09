@@ -20,17 +20,25 @@
     </div>
 
     <div class="container-fluid" align="center">
+        <button id="dash" class="btn btn-info"><i class="fa fa-rebel"></i>
+            <a href="index.html">Back To Rebel Search</a></button>
+        <button id="dash" href="index.html" class="btn btn-info">
+            <i class="fa fa-rebel"></i>
+            Back To Rebel Search
+        </button>
+    </div>
+
+    <div class="container-fluid" align="center">
         <button id="start" class="btn btn-primary">Start</button>
         <button id="refresh" class="btn btn-primary">Refresh</button>
         <button id="stop" class="btn btn-primary">Stop</button>
         <button id="clear" class="btn btn-primary">Clear All</button>
     </div>
 
-    <div class="container-fluid" align="center">
+    <div class="container-fluid" align="center" style="width:80%">
         <table class="table table-striped">
             <tr>
                 <td><h3>State</h3></td>
-                <td><h3>Title</h3></td>
                 <td><h3>Cpu Utilization%</h3></td>
                 <td><h3>RAM Available</h3></td>
                 <td><h3>Table Size</h3></td>
@@ -39,7 +47,6 @@
             </tr>
             <tr id="stats">
                 <td id="stat">Idle</td>
-                <td id="title"></td>
                 <td id="cpu">0%</td>
                 <td id="mem">0</td>
                 <td id="tsize">0</td>
@@ -49,7 +56,7 @@
         </table>
     </div>
 
-    <div class="container-fluid" align="center">
+    <div class="container-fluid" align="center" style="width:80%">
         <table class=" table table-striped">
             <tr>
                 <td><h3 align="center">Last Ten Urls</h3></td>
