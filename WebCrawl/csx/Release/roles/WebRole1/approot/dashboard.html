@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Dashboard</title>
+
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" href="http://sstatic.net/stackoverflow/img/favicon.ico">
+</head>
+<body>
+    <div class="container-fluid" align="center">
+        <h1><i id="bug" class="fa fa-bug"></i></h1>
+        <h1>Dashboard</h1>
+    </div>
+
+    <div class="container-fluid" align="center">
+        <button id="start" class="btn btn-primary">Start</button>
+        <button id="refresh" class="btn btn-primary">Refresh</button>
+        <button id="stop" class="btn btn-primary">Stop</button>
+        <button id="clear" class="btn btn-primary">Clear All</button>
+    </div>
+
+    <div class="container-fluid" align="center">
+        <table class="table table-striped">
+            <tr>
+                <td><h3>State</h3></td>
+                <td><h3>Title</h3></td>
+                <td><h3>Cpu Utilization%</h3></td>
+                <td><h3>RAM Available</h3></td>
+                <td><h3>Table Size</h3></td>
+                <td><h3>Queue Size</h3></td>
+                <td><h3>Urls Crawled</h3></td>
+            </tr>
+            <tr id="stats">
+                <td id="stat">Idle</td>
+                <td id="title"></td>
+                <td id="cpu">0%</td>
+                <td id="mem">0</td>
+                <td id="tsize">0</td>
+                <td id="qsize">0</td>
+                <td id="crawl">0</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="container-fluid" align="center">
+        <table class=" table table-striped">
+            <tr>
+                <td><h3 align="center">Last Ten Urls</h3></td>
+                <td><h3 align="center">Last Ten Errors</h3></td>
+            </tr>
+            <tr>
+                <td><ol id="ten"></ol></td>
+                <td><ol id="err"></ol></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
+
+<script>
+    $("#start").click(function start() {
+        $("#stat").empty();
+        $.ajax({
+            type: "POST",
+            url: "admin.asmx/StartCrawl",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (msg) {
+                console.log(msg.d);
+            }
+        })
+    })
+
+    $("#stop").click(function stop() {
+        $("#status").empty();
+        $.ajax({
+            type: "POST",
+            url: "admin.asmx/StopCrawl",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (msg) {
+                console.log(msg.d);
+            }
+        })
+    })
+
+    $("#clear").click(function clear() {
+        $.ajax({
+            type: "POST",
+            url: "admin.asmx/ClearAll",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (msg) {
+                console.log(msg.d);
+            }
+        })
+    })
+
+    $("#refresh").click(function fresh() {
+        $("#stat").empty();
+        $("#cpu").empty();
+        $("#mem").empty();
+        $("#tsize").empty();
+        $("#qsize").empty();
+        $("#ten").empty();
+        $("#err").empty();
+        $("#crawl").empty();
+
+        $.ajax({
+            type: "POST",
+            url: "admin.asmx/Stats",
+            data: JSON.stringify(),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (msg) {
+                console.log(msg.d);
+                var result = $.parseJSON(msg.d);
+                console.log(result);
+
+                $("#stat").text(result[0]);
+                $("#cpu").text(result[1] + "%");
+                $("#mem").text(result[2]);
+                $("#tsize").text(result[3]);
+                var ten = result[4].split(',');
+                var i = 0;
+                while (i != ten.length) {
+                    $("#ten").append("<li>" + ten[i] + "</li>");
+                    i++;
+                }
+                $("#crawl").text(result[5]);
+
+            }
+        })
+
+        $.ajax({
+            type: "POST",
+            url: "admin.asmx/Error",
+            data: JSON.stringify(),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (msg) {
+                console.log(msg.d);
+                var result = $.parseJSON(msg.d);
+                var error = result[0].split(',');
+                console.log(result);
+                var i = 0;
+                while (i != error.length) {
+                    $("#err").append("<li>" + error[i] + "</li>");
+                    i++;
+                }
+            }
+        })
+
+        $.ajax({
+            type: "POST",
+            url: "admin.asmx/getQueueSize",
+            data: JSON.stringify(),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (msg) {
+                console.log(msg.d);
+                $("#qsize").append("<p>" + msg.d + "</p>");
+            }
+        })
+    })
+</script>

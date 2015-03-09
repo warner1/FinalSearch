@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Bolt Search</title>
+    <title>Rebel Search</title>
     
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
     <!-- Latest compiled and minified CSS -->
@@ -15,9 +15,8 @@
 </head>
 <body>
     <div class="container-fluid" align="center">
-        
-        <h1 align="center"><i id="bolt" class="fa fa-bolt fa-6"></i></h1>
-        <h3 align="center">Search As Fast As Lightning</h3>
+        <h1 align="center"><i id="rebel" class="fa fa-rebel"></i></h1>
+        <h1 align="center">Rebel Search</h1>
     </div>
     
 
@@ -36,6 +35,10 @@
         <table id="suggestions" class="table" style="width:80%"></table>
     </div>
 
+    <div class="container-fluid" align="center">
+       <button id="dash" class="btn btn-info"><i class="fa fa-bug"></i>Travel to Dashboard</button>
+    </div>
+
     <div class="container" align="center" >
         <table id="count" class="table table-striped">
         </table>
@@ -51,48 +54,6 @@
         <table id="titles" class="table table-striped" ></table>
     </div>
 
-    <div class="container" align="center" >
-        <button id="start" class="btn btn-primary">Start</button>
-        <button id="refresh" class="btn btn-primary">Refresh</button>
-        <button id="stop" class="btn btn-primary">Stop</button>
-        <button id="clear" class="btn btn-primary">Clear All</button>
-    </div>
-
-    <div class="container" align="center">
-        <table class="table table-striped">
-            <tr>
-                <td><h3>State</h3></td>
-                <td><h3>Title</h3></td>
-                <td><h3>Cpu Utilization%</h3></td>
-                <td><h3>RAM Available</h3></td>
-                <td><h3>Table Size</h3></td>
-                <td><h3>Queue Size</h3></td>
-                <td><h3>Urls Crawled</h3></td>
-            </tr>
-            <tr id="stats">
-                <td id="stat">Idle</td>
-                <td id="title"></td>
-                <td id="cpu">0%</td>
-                <td id="mem">0</td>
-                <td id="tsize">0</td>
-                <td id="qsize">0</td>
-                <td id="crawl">0</td>
-            </tr>
-        </table>
-    </div>
-
-    <div class="container" align="center">
-        <table class=" table table-striped" >
-            <tr>
-                <td><h3 align="center">Last Ten Urls</h3></td>
-                <td><h3 align="center">Last Ten Errors</h3></td>
-            </tr>
-            <tr>
-                <td><ol id="ten"></ol></td>
-                <td><ol id="err"></ol></td>
-            </tr>
-        </table>
-    </div>
 </body>
 </html>
 
