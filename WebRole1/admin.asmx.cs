@@ -27,7 +27,7 @@ namespace WebRole1
     [System.Web.Script.Services.ScriptService]
     public class admin : System.Web.Services.WebService
     {
-        public static Dictionary<HashSet<string>, List<string>> cache = new Dictionary<HashSet<string>,List<string>>();
+        public static Dictionary<string, List<string>> cache = new Dictionary<string,List<string>>();
 
         [WebMethod]
         public String StartCrawl()
@@ -162,15 +162,24 @@ namespace WebRole1
         }
 
         [WebMethod]
+        public void clearCache()
+        {
+            cache.Clear();
+        }
+
+        [WebMethod]
         public List<string> getPopular(string input)
         {
-            HashSet<string> hash = new HashSet<string> {input};
-            if (cache.ContainsKey(hash))
+            if (cache.ContainsKey(input))
             {
-                return cache[hash];
+                return cache[input];
             }
             else
             {
+                if (cache.Count() == 100)
+                {
+                    cache.Clear();
+                }
                 List<data> entities = new List<data>();
                 string[] words = input.ToLower().Split(' ');
                 CloudTable urltable = getTableref();
@@ -207,10 +216,10 @@ namespace WebRole1
                     list.Add(t.Item3);
                     list.Add(t.Item4.ToString());
 
-                    cache.Add(new HashSet<string> { input }, list);
                     var serialized = new JavaScriptSerializer().Serialize(list);
                     final.Add(serialized);
                 }
+                cache.Add(input, final);
 
                 return final;
             }

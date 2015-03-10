@@ -41,7 +41,11 @@
             
             <a href="dashboard.html">Travel to Dashboard</a>
         </button>
+        <button id="cache" class="btn btn-danger">
+            Clear Cache
+        </button>
     </div>
+
 
     <div class="container" align="center" >
         <table id="count" class="table table-striped">
@@ -115,6 +119,20 @@
                 }
             })
         }
+    })
+
+    $("#cache").click(function cc() {
+        $.ajax({
+            type: 'POST',
+            url: "admin.asmx/clearCache",
+            data: JSON.stringify(),
+            contentType: "application/json; charset=utf-8",
+            data: {},
+            success: function () {
+                console.log("It Is Done");
+
+            }
+        })
     })
 
     $("#query").click(function search() {

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WebCrawl" generation="1" functional="0" release="0" Id="402f41a8-0a7e-4549-bd8d-bb579af734e8" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
+<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WebCrawl" generation="1" functional="0" release="0" Id="0f57dc99-2a62-47f1-a69c-6d3a3139b3fc" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
   <groups>
     <group name="WebCrawlGroup" generation="1" functional="0" release="0">
       <componentports>
@@ -42,7 +42,7 @@
       </maps>
       <components>
         <groupHascomponents>
-          <role name="WebRole1" generation="1" functional="0" release="0" software="C:\Users\iguest\Downloads\info344hw4-master\WebCrawl\csx\Debug\roles\WebRole1" entryPoint="base\x64\WaHostBootstrapper.exe" parameters="base\x64\WaIISHost.exe " memIndex="-1" hostingEnvironment="frontendadmin" hostingEnvironmentVersion="2">
+          <role name="WebRole1" generation="1" functional="0" release="0" software="C:\Users\iguest\Documents\FinalSearch\WebCrawl\csx\Debug\roles\WebRole1" entryPoint="base\x64\WaHostBootstrapper.exe" parameters="base\x64\WaIISHost.exe " memIndex="-1" hostingEnvironment="frontendadmin" hostingEnvironmentVersion="2">
             <componentports>
               <inPort name="Endpoint1" protocol="http" portRanges="80" />
             </componentports>
@@ -61,7 +61,7 @@
           </sCSPolicy>
         </groupHascomponents>
         <groupHascomponents>
-          <role name="WorkerRole1" generation="1" functional="0" release="0" software="C:\Users\iguest\Downloads\info344hw4-master\WebCrawl\csx\Debug\roles\WorkerRole1" entryPoint="base\x64\WaHostBootstrapper.exe" parameters="base\x64\WaWorkerHost.exe " memIndex="-1" hostingEnvironment="consoleroleadmin" hostingEnvironmentVersion="2">
+          <role name="WorkerRole1" generation="1" functional="0" release="0" software="C:\Users\iguest\Documents\FinalSearch\WebCrawl\csx\Debug\roles\WorkerRole1" entryPoint="base\x64\WaHostBootstrapper.exe" parameters="base\x64\WaWorkerHost.exe " memIndex="-1" hostingEnvironment="consoleroleadmin" hostingEnvironmentVersion="2">
             <settings>
               <aCS name="__ModelData" defaultValue="&lt;m role=&quot;WorkerRole1&quot; xmlns=&quot;urn:azure:m:v1&quot;&gt;&lt;r name=&quot;WebRole1&quot;&gt;&lt;e name=&quot;Endpoint1&quot; /&gt;&lt;/r&gt;&lt;r name=&quot;WorkerRole1&quot; /&gt;&lt;/m&gt;" />
             </settings>
@@ -88,9 +88,9 @@
     </group>
   </groups>
   <implements>
-    <implementation Id="a065b6a1-b68c-4693-a648-9174d4e28675" ref="Microsoft.RedDog.Contract\ServiceContract\WebCrawlContract@ServiceDefinition">
+    <implementation Id="dd9af088-7508-4206-b40c-1c4b7d67d635" ref="Microsoft.RedDog.Contract\ServiceContract\WebCrawlContract@ServiceDefinition">
       <interfacereferences>
-        <interfaceReference Id="8f6901d1-3dd9-4622-8fe8-72f157c3ed17" ref="Microsoft.RedDog.Contract\Interface\WebRole1:Endpoint1@ServiceDefinition">
+        <interfaceReference Id="05366cd6-65ac-40be-9a11-282622cadadd" ref="Microsoft.RedDog.Contract\Interface\WebRole1:Endpoint1@ServiceDefinition">
           <inPort>
             <inPortMoniker name="/WebCrawl/WebCrawlGroup/WebRole1:Endpoint1" />
           </inPort>

@@ -13,7 +13,7 @@
     <Property name="Configuration" value="Release" />
     <Property name="Platform" value="AnyCPU" />
     <Property name="RoleTargetFramework" value="v4.5" />
-    <Property name="OutputDir" value="C:\Users\iguest\Downloads\info344hw4-master\WebCrawl\obj\Release\WorkerRole1\" />
+    <Property name="OutputDir" value="C:\Users\iguest\Documents\FinalSearch\WebCrawl\obj\Release\WorkerRole1\" />
     <Property name="EntryPoint" value="WorkerRole1.dll" />
     <Property name="SourceDir" value="" />
     <Property name="SitePhysicalPath" value="" />
