@@ -64,10 +64,34 @@
             </tr>
         </table>
     </div>
+
+    <div class="container" align="center">
+        <table id="count" class="table table-striped">
+            <tr> <td>Last Title Processed</td> <td>Total Titles Processed</td></tr>
+            <tr> <td id="lt"> </td> <td id="tc"></td></tr>
+        </table>
+    </div>
 </body>
 </html>
 
 <script>
+    $(document).ready(function () {
+        console.log("Document Ready");
+        $.ajax({
+            type: 'POST',
+            url: "WebService1.asmx/getStats",
+            data: JSON.stringify(),
+            contentType: "application/json; charset=utf-8",
+            data: {},
+            success: function (msg) {
+                console.log(msg.d);
+                $("#lt").html(msg.d[0]);
+                $("#tc").html(msg.d[1]);
+
+            }
+        })
+    })
+
     $("#start").click(function start() {
         $("#stat").empty();
         $.ajax({

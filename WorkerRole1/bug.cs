@@ -78,7 +78,7 @@ namespace WorkerRole1
                         {
                             dupes.Add(url);
                             var page = new HtmlWeb().Load(url);
-                            string date = "No Date Found";
+                            string date = "No Date found";
                             if (url.Contains("cnn.com/"))
                             {
                                 date = page.DocumentNode.SelectSingleNode("//meta[@itemprop='dateCreated']").GetAttributeValue("content", "No Date Found");
@@ -87,7 +87,7 @@ namespace WorkerRole1
                             string[] words = title.Split(' ');
                             foreach (string s in words)
                             {
-                                if (!s.Equals("|"))
+                                if (!s.Equals("|") && !s.Equals("-"))
                                 {
                                     string cleantitle = RemoveSpecialCharacters(s);
                                     data data = new data(cleantitle, EncodeUrlInKey(url), title, date);

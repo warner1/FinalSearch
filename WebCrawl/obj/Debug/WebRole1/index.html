@@ -46,14 +46,6 @@
         </button>
     </div>
 
-
-    <div class="container" align="center" >
-        <table id="count" class="table table-striped">
-            <tr> <td>Last Title Processed</td> <td>Total Titles Processed</td></tr>
-            <tr> <td id="lt"> </td> <td id="tc"></td></tr>
-        </table>
-    </div>
-
     <div class="container" align="center">
         <table id="player" class="table table-striped">
 
@@ -68,7 +60,7 @@
         <script type="text/javascript">
     (function () {
         if (window.CHITIKA === undefined) { window.CHITIKA = { 'units': [] }; };
-        var unit = { "calltype": "async[2]", "publisher": "warner1", "width": 550, "height": 250, "sid": "Chitika Default" };
+        var unit = { "calltype": "async[2]", "publisher": "warner1", "width": 468, "height": 90, "sid": "Chitika Default" };
         var placement_id = window.CHITIKA.units.length;
         window.CHITIKA.units.push(unit);
         document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
@@ -82,26 +74,11 @@
 
 <script>
 
-    $(document).ready(function () {
-        console.log("Document Ready");
-        $.ajax({
-            type: 'POST',
-            url: "WebService1.asmx/getStats",
-            data: JSON.stringify(),
-            contentType: "application/json; charset=utf-8",
-            data: {},
-            success: function (msg) {
-                console.log(msg.d);
-                $("#lt").html(msg.d[0]);
-                $("#tc").html(msg.d[1]);
-
-            }
-        })
-    })
-
     $("#input").keyup(function suggest() {
         var text = $("#input").val().trim().toLowerCase();
-        $("#suggestions").empty();
+        if (text.lenth = 0) {
+            $("#suggestions").empty();
+        }
         if (text != "") {
             $.ajax({
                 type: "POST",
@@ -110,6 +87,7 @@
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 success: function (msg) {
+                    $("#suggestions").empty();
                     var i = 0;
                     while (i != msg.d.length) {
                         $("#suggestions").append("<tr><td>" + msg.d[i] + "</td></tr>");
@@ -154,17 +132,21 @@
                 success: function (msg) {
                     console.log(msg);
                     console.log(msg.d);
-                    $("#titles").append("<tr> <td>Article Title</td>  <td>Link</td> </tr>")
+                    $("#titles").append("<tr> <td>Article Title</td>  <td>Link</td> <td>Publish Date</td></tr>")
                     if (msg.d.length > 0) {
            
                         for ($i = 0; $i < msg.d.length; $i++) {
                             var strings = msg.d[$i].substring(1, msg.d[$i].length - 1);
                             var split = strings.split('"');
-                            $("#titles").append("<tr> <td>" + split[1] + "</td> <td> <a href=\"" + split[3] + "\">" + split[3] + "</a> </td> </tr>");
+                            var pdate = split[5];
+                            if (split[5].length != 13) {
+                                pdate = split[5].substring(0, 10);
+                            } 
+                            $("#titles").append("<tr> <td>" + split[1] + "</td> <td> <a href=\"" + split[3] + "\">" + split[3] + "</a> </td> <td>" + pdate + "</td></tr>");
 
                         }
                     } else {
-                        $("#titles").append("<tr> <td> No Titles Found </td> <td> No Urls Found </td> </tr>");
+                        $("#titles").append("<tr> <td> No Titles Found </td> <td> No Urls Found </td><td> No Date </td> </tr>");
 
                     }
                     
